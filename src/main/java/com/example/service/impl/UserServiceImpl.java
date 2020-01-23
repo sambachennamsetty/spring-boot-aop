@@ -29,6 +29,8 @@ public class UserServiceImpl implements IUserService {
 			userRepository.save(u);
 			return "User Updated Successfully";
 		}).orElseThrow(() -> new NullPointerException("Record not found exception for id:" + user.getId()));
+		// for sample i am using nullPointerException , basically we have to use
+		// customException class
 	}
 
 	@Override
